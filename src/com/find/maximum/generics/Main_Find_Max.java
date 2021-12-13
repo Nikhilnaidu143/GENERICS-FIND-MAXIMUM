@@ -17,5 +17,10 @@ public class Main_Find_Max {
 	    object.floatMax(15.5f, 12.8f, 9.56f); //TC-1.1 :- max num at first position.
 	    object.floatMax(12.4f, 25.8f, 15.7f); //TC-1.2 :- max num at second position.
 	    object.floatMax(14.2f, 18.7f, 28.9f); //TC-1.3 :- max num at third position.
+	
+	    /** Test cases for Strings. **/
+	    object.stringMax("Yesdhani", "Nikhil", "Ajay");  //TC-1.1 :- max string at first position.
+	    object.stringMax("car", "cycle", "bike");  //TC-1.2 :- max string at second position.
+	    object.stringMax("bat", "ball", "wickets"); //TC-1.3 :- max string at third position. 
 	}
 }
