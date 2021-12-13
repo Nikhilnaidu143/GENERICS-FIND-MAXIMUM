@@ -19,30 +19,36 @@ public class Find_Maximum <T extends Comparable<T>>{
 		this.VAR5 = var5;
 	}
 	
-	// Method by using generics
+	public T testMaximum() {
+		T findMax = Find_Maximum.testMaximum(VAR1, VAR2, VAR3, VAR4, VAR5);
+		printMax(findMax); //calling printMaximum method.
+		return findMax;
+	}
+	
+	/** Creating print maximum function **/
+	public void printMax(T max) {
+		System.out.println("\nMAXIMUM IS :- " + max);
+	} 
+	
+	// Method by using generics 
 	public static <T extends Comparable <T>> T testMaximum(T var1 , T var2 , T var3 , T var4 , T var5) {
 		
 		T max = var5;
 		// comparing numbers using compareTo method.
 	    if(var1.compareTo(var2)>0 && var1.compareTo(var3)>0 && var1.compareTo(var4)>0 && var1.compareTo(max)>0) {
 	    	max = var1;
-	    	System.out.println("\n\n" + max + " is maximum.");
 	    }
 	    else if(var2.compareTo(var1)>0 && var2.compareTo(var3)>0 && var2.compareTo(var4)>0 && var2.compareTo(max)>0) {
 	        max = var2;
-	    	System.out.println("\n" + max + " is maximum.");
 	    }
 	    else if(var3.compareTo(var1)>0 && var3.compareTo(var2)>0 && var3.compareTo(var4)>0 && var3.compareTo(max)>0){
 	    	max = var3;
-	    	System.out.println("\n" + max + " is maximum.");
 	    }
 	    else if(var4.compareTo(var1)>0 && var4.compareTo(var2)>0 && var4.compareTo(var3)>0 && var4.compareTo(max)>0) {
 	    	max = var4;
-	    	System.out.println("\n" + max + " is maximum.");
 	    }
 	    else {
 	    	max = var5;
-	    	System.out.println("\n" + max + " is maximum.");
 	    }
 	    return max;
 	}
